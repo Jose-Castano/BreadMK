@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "configurePresets": [
+    {
+      "name": "Windows x64 Debug",
+      "displayName": "Windows x64 Debug",
+      "description": "x64 Debug build for Windows",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/install",
+        "BREAD_TARGET_ARCH": "X64",
+        "BREAD_BUILD_TYPE": "DebugBuild"
+      }
+    },
+    {
+      "name": "Windows x64 Release",
+      "displayName": "Windows x64 Release",
+      "description": "x64 RelWithDebInfo build for Windows",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang",
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/install",
+        "BREAD_TARGET_ARCH": "X64",
+        "BREAD_BUILD_TYPE": "ReleaseBuild"
+      }
+    },
+    {
+      "name": "Windows x64 Build",
+      "displayName": "Windows x64 Game Build",
+      "description": "x64 Release build for Windows",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/install",
+        "BREAD_TARGET_ARCH": "X64",
+        "BREAD_BUILD_TYPE": "GameBuild"
+      }
+    }
+  ]
+}

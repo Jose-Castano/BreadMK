@@ -5,7 +5,7 @@ include("bread/cmake/engine.cmake")
 add_subdirectory("bread")
 
 file(GLOB GAME_SRC
-    Game/Main.cpp
+    App/Main.cpp
 )
 
 bread_project(
